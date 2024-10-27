@@ -33,7 +33,7 @@ Sistema de cadastro e consulta de clientes, conforme solicitado em desafio "hand
 
 # :hammer: Funcionalidades do projeto
 
-- `Cadastro`: Cadastro
-- `Consulta`: Consulta
-- `Edição`: Edição
-- `Exclusão`: Exclusão
+- `Cadastro`: Cadastro via formulário de um cliente por vez
+- `Consulta`: Consulta e pesquisa através do nome do cliente
+- `Edição`: Edição de usuários existentes
+- `Exclusão`: Exclusão de usuários cadastrados
