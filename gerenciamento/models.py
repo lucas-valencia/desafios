@@ -33,7 +33,7 @@ GENEROS = (
 class cliente(models.Model):
     nome = models.CharField(max_length=200)
     sobrenome = models.CharField(max_length=200)
-    cpf = CPFField('cpf')
+    cpf = CPFField('cpf', unique=True, max_length=11)
     data_nascimento = models.DateField(blank=True, null=True)
     gênero = models.CharField(max_length=1, choices=GENEROS)
 
