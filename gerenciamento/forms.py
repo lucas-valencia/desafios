@@ -5,6 +5,14 @@ class CadastroForm(forms.ModelForm):
     class Meta:
         model = cliente
         fields = '__all__'
+        widgets = {
+            'data_nascimento': forms.DateInput(format='%d-%m-%Y'),  # ou outro campo de data
+        }
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['data_nascimento'].input_formats = ['%d-%m-%Y']
+
     # Define os textos de ajuda
     def __init__(self, *args, **kwargs):
         super(CadastroForm, self).__init__(*args, **kwargs)
