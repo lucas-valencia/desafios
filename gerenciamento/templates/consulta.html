@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clientes</title>
+    {% load custom_filters %}
+</head>
+<body>
+    <h1>Consulta de Clientes</h1>
+    
+    <form method="get" action="{% url 'consulta' %}">
+        <input type="text" name="q" placeholder="Pesquisar cliente">
+        <button type="submit">Buscar</button>
+    </form>
+    
+    <table border="1px">
+        <tr>
+            {% for field in model_fields %}
+                <th>{{ field.verbose_name }}</th>
+            {% endfor %}
+            <th>Ações</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            {% for field in model_fields %}
+                <td>{{ cliente|get_field_value:field.name }}</td>
+            {% endfor %}
+            <td>
+                <a href="{% url 'editar_cliente' cliente.id %}">Editar</a> |
+                <a href="{% url 'apagar_cliente' cliente.id %}">Apagar</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="{{ model_fields|length }}">Nenhum cliente encontrado.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{% url 'index' %}">Voltar</a>
+</body>
+</html>
