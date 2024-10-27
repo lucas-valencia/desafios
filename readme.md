@@ -17,7 +17,7 @@ Sistema de cadastro e consulta de clientes, conforme solicitado em desafio "hand
 - [ ] Banco de dados em memória (H2 ou outros)
 - [x] Verificação para evitar cadastros duplicados (CPF como referência)
 - [ ] FrontEnd (Opcional)
-- [ ] Testes unitários (Opicional)
+- [x] Testes unitários (Opicional)
 
 # 📁 Acesso ao projeto
 
