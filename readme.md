@@ -43,9 +43,13 @@ Sistema de cadastro e consulta de clientes, conforme solicitado em desafio "hand
 
 **Dentro da pasta do projeto "desafios":**
 
+**>python manage.py makemigrations**
+
+**>python manage.py migrate**
+
 **>python manage.py runserver**
 
-**Pelo navegador, acesse "localhost"**
+**Pelo navegador, acesse "localhost:8000"**
 
 # :hammer: Funcionalidades do projeto
 
