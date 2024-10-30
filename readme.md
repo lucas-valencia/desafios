@@ -25,7 +25,23 @@ Sistema de cadastro e consulta de clientes, conforme solicitado em desafio "hand
 
 # 🛠️ Abrir e rodar o projeto
 
+**Instale um gerenciador de pacotes e ambientes virtuais, como Anaconda**
+
 **Via CMD, vá até a pasta "desafios**
+
+**Pelo prompt, crie um ambiente e instale nele o python**
+
+**>conda create --name nome_do_ambiente python=versão**
+
+**Ative o ambiente virtual criado**
+
+**conda activate nome_do_ambiente**
+
+**Instale o django**
+
+**pip install django**
+
+**Dentro da pasta do projeto "desafios":**
 
 **Execute: python manage.py runserver**
 
