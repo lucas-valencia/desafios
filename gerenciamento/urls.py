@@ -1,7 +1,6 @@
 # gerenciamento/urls.py
 
 from django.urls import path
-#from .views import index, cadastro, consulta, editar_cliente, apagar_cliente
 from . import views
 
 urlpatterns = [
